@@ -10,6 +10,9 @@ from django.urls import reverse_lazy
 from .models import SiteConfig, AcademicSession, AcademicTerm, StudentClass, Subject
 from .forms import SiteConfigForm, AcademicTermForm, AcademicSessionForm, StudentClassForm, SubjectForm, CurrentSessionForm
 
+from students.models import Student
+from staffs.models import Staff
+
 # Create your views here.
 @login_required
 def index_view(request):
