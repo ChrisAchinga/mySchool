@@ -12,13 +12,18 @@ from .forms import SiteConfigForm, AcademicTermForm, AcademicSessionForm, Studen
 
 from students.models import Student
 from staffs.models import Staff
+from corecode.models import Subject, StudentClass
+from finance.models import Invoice
 
 # Create your views here.
 @login_required
 def index_view(request):
   students = Student.objects.count()
   staff = Staff.objects.count()
-  context = {'students':students, 'staff':staff}
+  studentclass = StudentClass.objects.count()
+  subject = Subject.objects.count()
+  invoice = Invoice.objects.count()
+  context = {'students':students, 'staff':staff, 'studentclass':studentclass, 'subject':subject, 'invoice':invoice}
   return render(request, 'index.html', context)
 
 @login_required
