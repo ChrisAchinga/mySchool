@@ -2,107 +2,87 @@
 
 
 {% block content %}
-<div class="container mb-3">
-  <h1>Admin Panel</h1>
-  <h2 class="text-muted">Students & Staff</h2>
+<div id='subjects-classes'>
+  <div class="container mb-3">
+    <h1>Admin Panel</h1>
+    <h2 class="text-muted">Academics</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Classes</span>
+        <span class="info-box-number">2939</span>
+        <div class="mt-4">
+          <a href="" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Subjects</span>
+        <span class="info-box-number">4752</span>
+        <div class="mt-4">
+          <a href="" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>  
 </div>
 
-<div class="container">
-  <div class="info-box bg-blue">
-    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-    <div class="info-box-content">
-      <span class="info-box-text">Students</span>
-      <span class="info-box-number">41,410</span>
-      <!-- The progress section is optional -->
-      <div class="progress">
-        <div class="progress-bar" style="width: 70%"></div>
+<div id='student-staff'>
+  <div class="container mb-3">
+    <h1>Admin Panel</h1>
+    <h2 class="text-muted">Students & Staff</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Students</span>
+        <span class="info-box-number">{{ students }}</span>
+        <div class="mt-4">
+          <a href="{% url 'student-create' %}" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="{% url 'student-list' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
       </div>
-      <span class="progress-description">
-        70% Increase in 30 Days
-      </span>
-    </div><!-- /.info-box-content -->
-  </div><!-- /.info-box -->
-
-  <div class="info-box bg-blue">
-    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-    <div class="info-box-content">
-      <span class="info-box-text">Likes</span>
-      <span class="info-box-number">41,410</span>
-      <!-- The progress section is optional -->
-      <div class="progress">
-        <div class="progress-bar" style="width: 70%"></div>
+    </div>
+  
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Staff</span>
+        <span class="info-box-number">{{ staff }}</span>
+        <div class="mt-4">
+          <a href="" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="" class="btn btn-outline-success"> View All  </a>
+        </div>
       </div>
-      <span class="progress-description">
-        70% Increase in 30 Days
-      </span>
-    </div><!-- /.info-box-content -->
-  </div><!-- /.info-box -->
-
-  <div class="info-box bg-blue">
-    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-    <div class="info-box-content">
-      <span class="info-box-text">Likes</span>
-      <span class="info-box-number">41,410</span>
-      <!-- The progress section is optional -->
-      <div class="progress">
-        <div class="progress-bar" style="width: 70%"></div>
-      </div>
-      <span class="progress-description">
-        70% Increase in 30 Days
-      </span>
-    </div><!-- /.info-box-content -->
-  </div><!-- /.info-box -->
+    </div>  
 </div>
 
-<div class="container mb-3">
-  <h1>Admin Panel</h1>
-  <h2 class="text-muted">Finance & Results</h2>
-</div>
-
-<div class="container">
-  <div class="info-box bg-blue">
-    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-    <div class="info-box-content">
-      <span class="info-box-text">Likes</span>
-      <span class="info-box-number">41,410</span>
-      <!-- The progress section is optional -->
-      <div class="progress">
-        <div class="progress-bar" style="width: 70%"></div>
+<div id='finance'>
+  <div class="container mb-3">
+    <h1>Admin Panel</h1>
+    <h2 class="text-muted">Finance</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Invoice</span>
+        <span class="info-box-number">123</span>
+        <div class="mt-4">
+          <a href="" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="" class="btn btn-outline-success"> View All  </a>
+        </div>
       </div>
-      <span class="progress-description">
-        70% Increase in 30 Days
-      </span>
-    </div><!-- /.info-box-content -->
-  </div><!-- /.info-box -->
-
-  <div class="info-box bg-blue">
-    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-    <div class="info-box-content">
-      <span class="info-box-text">Likes</span>
-      <span class="info-box-number">41,410</span>
-      <!-- The progress section is optional -->
-      <div class="progress">
-        <div class="progress-bar" style="width: 70%"></div>
-      </div>
-      <span class="progress-description">
-        70% Increase in 30 Days
-      </span>
-    </div><!-- /.info-box-content -->
-  </div><!-- /.info-box -->
-
-  <div class="info-box bg-blue">
-    <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-    <div class="info-box-content">
-      <span class="info-box-text">Likes</span>
-      <span class="info-box-number">41,410</span>
-      <!-- The progress section is optional -->
-      <div class="progress">
-        <div class="progress-bar" style="width: 70%"></div>
-      </div>
-      <span class="progress-description">
-        70% Increase in 30 Days
-      </span>
-    </div><!-- /.info-box-content -->
-  </div><!-- /.info-box -->
+    </div>
 </div>
 {% endblock content %}
