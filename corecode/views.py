@@ -16,7 +16,10 @@ from staffs.models import Staff
 # Create your views here.
 @login_required
 def index_view(request):
-  return render(request, 'index.html')
+  students = Student.objects.count()
+  staff = Staff.objects.count()
+  context = {'students':students, 'staff':staff}
+  return render(request, 'index.html', context)
 
 @login_required
 def siteconfig_view(request):
