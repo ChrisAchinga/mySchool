@@ -2,6 +2,104 @@
 
 
 {% block content %}
-  <p>Dashboard contents and design coming soon.</p>
-  <p> Use the sidebar menu for now!</p>
+<div id='subjects-classes'>
+  <div class="container mb-3">
+    <h1>Admin Panel</h1>
+    <h2 class="text-muted">Academics</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Classes</span>
+        <span class="info-box-number">{{ studentclass }}</span>
+        <div class="mt-4">
+          <a href="{% url 'class-create' %}" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="{% url 'classes' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Subjects</span>
+        <span class="info-box-number">{{ subject }}</span>
+        <div class="mt-4">
+          <a href="{% url 'subject-create' %}" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="{% url 'subjects' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>  
+</div>
+
+<div id='student-staff'>
+  <div class="container mb-3">
+    <h2 class="text-muted">Students & Staff</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Students</span>
+        <span class="info-box-number">{{ students }}</span>
+        <div class="mt-4">
+          <a href="{% url 'student-create' %}" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="{% url 'student-list' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Staff</span>
+        <span class="info-box-number">{{ staff }}</span>
+        <div class="mt-4">
+          <a href="{% url 'staff-create' %}" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="{% url 'staff-list' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>  
+</div>
+
+<div id='finance'>
+  <div class="container mb-3">
+    <h2 class="text-muted">Finance</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Invoice</span>
+        <span class="info-box-number">{{invoice}}</span>
+        <div class="mt-4">
+          <a href="{% url 'invoice-create' %}" class="btn btn-outline-success mr-3"> add  </a>
+          <a href="{% url 'invoice-list' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id='finance'>
+  <div class="container mb-3">
+    <h2 class="text-muted">Academic Results</h2>
+  </div>
+  
+  <div class="container">
+    <div class="info-box bg-dark">
+      <span class="info-box-icon"><i class="fa fa-user"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Results</span>
+        <div class="mt-4">
+          <a href="{% url 'create-result' %}" class="btn btn-outline-success mr-3"> Create Results  </a>
+          <a href="{% url 'edit-results' %}" class="btn btn-outline-success mr-3"> Update Results  </a>
+          <a href="{% url 'view-results' %}" class="btn btn-outline-success"> View All  </a>
+        </div>
+      </div>
+    </div>
+</div>
 {% endblock content %}

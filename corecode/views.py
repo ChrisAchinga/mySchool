@@ -10,10 +10,21 @@ from django.urls import reverse_lazy
 from .models import SiteConfig, AcademicSession, AcademicTerm, StudentClass, Subject
 from .forms import SiteConfigForm, AcademicTermForm, AcademicSessionForm, StudentClassForm, SubjectForm, CurrentSessionForm
 
+from students.models import Student
+from staffs.models import Staff
+from corecode.models import Subject, StudentClass
+from finance.models import Invoice
+
 # Create your views here.
 @login_required
 def index_view(request):
-  return render(request, 'index.html')
+  students = Student.objects.count()
+  staff = Staff.objects.count()
+  studentclass = StudentClass.objects.count()
+  subject = Subject.objects.count()
+  invoice = Invoice.objects.count()
+  context = {'students':students, 'staff':staff, 'studentclass':studentclass, 'subject':subject, 'invoice':invoice}
+  return render(request, 'index.html', context)
 
 @login_required
 def siteconfig_view(request):
